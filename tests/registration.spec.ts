@@ -15,10 +15,5 @@ test ("should be able to navigate", async ({page}) =>{
     await page.pause();
     
     
-    //const  registrationPage = new RegistrationPage (page);
-    //await registrationPage.navigateUrl();
-    //await registrationPage.clickRegisterLink();
-    //await registrationPage.enterInformation();
-    //wait registrationPage.selectGender();
     
 })
