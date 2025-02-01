@@ -1,0 +1,22 @@
+{
+  "name": "ui-demo-webshop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siphahle/ui-demo-webshop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/siphahle/ui-demo-webshop/issues"
+  },
+  "homepage": "https://github.com/siphahle/ui-demo-webshop#readme",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.50.1",
+    "@types/node": "^22.13.0"
+  }
+}
