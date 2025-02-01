@@ -12,7 +12,7 @@ test ("should be able to navigate", async ({page}) =>{
     await app.RegistrationPage.clickRegisterLink();
     await app.RegistrationPage.selectGender();
     await app.RegistrationPage.enterInformation();
-    await page.pause();
+    //await page.pause();
     
     
     
