@@ -1,0 +1,34 @@
+import { Page } from "@playwright/test";
+
+export class RegistrationPage
+{   
+
+    protected readonly page;
+    constructor(page: Page)
+    {
+        this.page = page;
+    }
+
+    async navigateUrl()
+    {
+       await this.page.goto("https://demowebshop.tricentis.com/")
+    }
+    async  clickRegisterLink()
+    {
+        await this.page.getByRole('link', { name: 'Register' }).click();
+    }
+    async selectGender()
+    {
+        await this.page.getByRole('radio', { name: 'Male', exact: true }).check();
+    }
+    async enterInformation()
+    {
+        await this.page.getByRole('textbox', { name: 'First name:' }).fill('Siphahle');
+        await this.page.getByRole('textbox', { name: 'Last name:' }).click();
+        await this.page.getByRole('textbox', { name: 'Last name:' }).fill('Nomnganga');
+        await this.page.getByRole('textbox', { name: 'Email:' }).fill('siphahle.nomnganga@gmail.com');
+        await this.page.getByRole('textbox', { name: 'Password:', exact: true }).fill('Siphahle');
+        await this.page.getByRole('textbox', { name: 'Confirm password:' }).fill('Siphahle');
+        await this.page.getByRole('button', { name: 'Register' }).click();
+    }
+}
