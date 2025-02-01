@@ -12,12 +12,5 @@ test ("should be able to Login", async ({page}) =>{
    await app.LoginPage.clickLoginBtn();
    await app.HomePage.isUserOnHomePage();
   
-
-    //const  loginPage = new LoginPage (page);
-    //await loginPage.navigateUrl();
-    //await loginPage.clickLoginLink();
-    //await loginPage.enterLogincredentials();
-    //await loginPage.clickLoginBtn();
-    
     await page.pause();
 })
