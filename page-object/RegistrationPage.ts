@@ -12,7 +12,7 @@ export class RegistrationPage
 
     async navigateUrl()
     {
-       await this.page.goto("https://demowebshop.tricentis.com/")
+       await this.page.goto("/")
     }
     async  clickRegisterLink()
     {
