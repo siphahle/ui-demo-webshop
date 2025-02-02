@@ -2,9 +2,9 @@
 import {test}from "@playwright/test"
 import { App } from "../page-object/App";
 
+test ("User should be able to Login", async ({page}) =>{
 
-test ("should be able to Login", async ({page}) =>{
-
+    
    const app = new App (page);
    await app.LoginPage.navigateUrl();
    await app.LoginPage.clickLoginLink();

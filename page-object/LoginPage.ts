@@ -1,4 +1,5 @@
 import { Page } from "@playwright/test";
+import * as userdata  from "../data/login-data.json";
 
 export class LoginPage
 {   
@@ -20,8 +21,8 @@ export class LoginPage
     async enterLogincredentials()
     {
         
-        await this.page.getByRole('textbox', { name: 'Email:' }).fill('siphahle.nomnganga@gmail.com');
-        await this.page.getByRole('textbox', { name: 'Password:', exact: true }).fill('Siphahle_0412$');
+        await this.page.getByRole('textbox', { name: 'Email:' }).fill(userdata.username);
+        await this.page.getByRole('textbox', { name: 'Password:', exact: true }).fill(userdata.passsword);
         
     }
     async clickLoginBtn ()

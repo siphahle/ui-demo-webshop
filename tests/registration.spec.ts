@@ -3,7 +3,7 @@ import {test}from "@playwright/test"
 import { App } from "../page-object/App"
 
 
-test ("should be able to navigate", async ({page}) =>{
+test ("User should be able to Register", async ({page}) =>{
 
     
     const app = new App (page);
@@ -12,7 +12,7 @@ test ("should be able to navigate", async ({page}) =>{
     await app.RegistrationPage.clickRegisterLink();
     await app.RegistrationPage.selectGender();
     await app.RegistrationPage.enterInformation();
-    ///await page.pause();
+    await page.pause();
     
     
     

@@ -1,4 +1,5 @@
 import { Page } from "@playwright/test";
+import * as userdata  from "../data/registration-data.json";
 
 export class RegistrationPage
 {   
@@ -23,12 +24,11 @@ export class RegistrationPage
     }
     async enterInformation()
     {
-        await this.page.getByRole('textbox', { name: 'First name:' }).fill('Siphahle');
-        await this.page.getByRole('textbox', { name: 'Last name:' }).click();
-        await this.page.getByRole('textbox', { name: 'Last name:' }).fill('Nomnganga');
-        await this.page.getByRole('textbox', { name: 'Email:' }).fill('siphahle.nomnganga@gmail.com');
-        await this.page.getByRole('textbox', { name: 'Password:', exact: true }).fill('Siphahle');
-        await this.page.getByRole('textbox', { name: 'Confirm password:' }).fill('Siphahle');
+        await this.page.getByRole('textbox', { name: 'First name:' }).fill(userdata.FirstName);
+        await this.page.getByRole('textbox', { name: 'Last name:' }).fill(userdata.LastName);
+        await this.page.getByRole('textbox', { name: 'Email:' }).fill(userdata.Email);
+        await this.page.getByRole('textbox', { name: 'Password:', exact: true }).fill(userdata.Password);
+        await this.page.getByRole('textbox', { name: 'Confirm password:' }).fill(userdata.ConfirmPassword);
         await this.page.getByRole('button', { name: 'Register' }).click();
     }
 }
