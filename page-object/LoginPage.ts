@@ -5,14 +5,17 @@ export class LoginPage
 {   
 
     protected readonly page;
+    link_loginMessage: any;
     constructor(page: Page)
     {
         this.page = page;
+        this.link_loginMessage =page.getByRole('link', { name: 'testsipha@gmail.com' });
     }
+
 
     async navigateUrl()
     {
-       await this.page.goto("https://demowebshop.tricentis.com/")
+       await this.page.goto("/")
     }
     async  clickLoginLink()
     {

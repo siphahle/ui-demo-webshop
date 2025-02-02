@@ -1,19 +1,15 @@
 
 import {test}from "@playwright/test"
-import { App } from "../page-object/App"
+import { RegistrationPage} from "../page-object/RegistrationPage"
 
 
 test ("User should be able to Register", async ({page}) =>{
 
     
-    const app = new App (page);
-    await app.LoginPage.navigateUrl();
-    await app.RegistrationPage.navigateUrl();
-    await app.RegistrationPage.clickRegisterLink();
-    await app.RegistrationPage.selectGender();
-    await app.RegistrationPage.enterInformation();
-    await page.pause();
-    
-    
-    
+    const registrationPage = new RegistrationPage (page);
+    await registrationPage.navigateUrl();
+    await registrationPage.navigateUrl();
+    await registrationPage.clickRegisterLink();
+    await registrationPage.selectGender();
+    await registrationPage.enterInformation();  
 })

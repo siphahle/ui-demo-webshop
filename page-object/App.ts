@@ -1,8 +1,9 @@
 
 import {Page, test}from "@playwright/test"
 import { LoginPage } from "./LoginPage";
-import { HomePage } from "./HomePage";
 import { RegistrationPage } from "./RegistrationPage";
+import { ComputersPage } from "./ComputersPage";
+
 
 export class App
 {   
@@ -16,13 +17,12 @@ export class App
     {
         return new LoginPage(this.page);
     }
-
-    public get HomePage(): HomePage
-    {
-        return new HomePage(this.page);
-    }
     public get RegistrationPage(): RegistrationPage
     {
         return new RegistrationPage(this.page);
+    }
+    public get ComputersPage(): ComputersPage
+    {
+        return new ComputersPage(this.page)
     }
 }
