@@ -20,11 +20,12 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
+  
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
-  timeout: 100 * 1000,
+  timeout: 60 * 1000,
   expect: { timeout: 10 * 1000 },
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
@@ -32,7 +33,7 @@ export default defineConfig({
     baseURL: 'https://demowebshop.tricentis.com/',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    trace:'on',
   },
 
   /* Configure projects for major browsers */
@@ -42,7 +43,6 @@ export default defineConfig({
       name: 'chromium',
       use: { ...devices['Desktop Chrome'],
         viewport: {width:1920, height:919},
-        headless: false,
         
        },
       dependencies:["setup"]
