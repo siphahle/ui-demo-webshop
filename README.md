@@ -1,5 +1,8 @@
 # Playwright UI Automation Assessment
-### This Repository Automates the (https://demowebshop.tricentis.com/).
+ This Repository Automates the (https://demowebshop.tricentis.com/).
+
+### Overview of My Automation Framework Using Playwright, TypeScript, and CI/CD Integration
+My framework is built using Playwright and TypeScript. The architecture follows the Page Object Model (POM) design pattern, and it incorporates Mocha for test execution along with a Data-Driven Framework approach. For CI/CD, I have utilized GitHub and GitHub Actions.
 
 - This framework Automates the following pages:
 - Registration Page
